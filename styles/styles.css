@@ -1,0 +1,399 @@
+/* Глобальные настройки
+======================= */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+
+  margin: 0;
+
+  background-color: #f2f2f2;
+  color: black;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: white;
+}
+
+.visually_hidden {
+  display: none;
+}
+
+.button {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.offer {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+
+
+/* Шапка
+============================ */
+
+.page_header {
+  background-color: white;
+  color: black;
+}
+
+.navigation_list {
+  list-style-type:none;
+  text-align: center;
+}
+
+
+
+.navigation_link {
+  font-weight:700;
+  font-size: 20px;
+  line-height: 24px;
+  color: black;
+  text-decoration: none;
+  vertical-align: top;
+  text-transform: capitalize;
+}
+
+.button_header {
+  background-color: #756157;
+}
+
+
+
+
+/* Секция приветствия
+============================ */
+
+.greeting_section {
+  background-image: url("../images/decorative_items/greeting_background.jpg");
+  background-size: 100% auto;
+}
+
+.greeting_divider {
+  background-image: url("../images/decorative_items/greeting_divider.svg");
+}
+
+
+
+/* Секция преимущества
+============================ */
+
+.advantages_list {
+  list-style-type:none;
+}
+
+
+.advantages_description {
+
+}
+
+.advantages_item_blue {
+  background-color: #82B3D3;
+  color: white;
+}
+
+.advantages_item_lightgrey {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages_item_lightblue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+
+
+
+/* Секция рекомендации
+============================ */
+
+.recommendations_list {
+  list-style-type:none;
+}
+
+.recommendations_item_lightblue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.recommendations_house {
+  background-image: url("../images/decorative_items/recommendations_house.svg");
+}
+
+.recommendations_item_lightgrey {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.recommendations_food {
+  background-image: url("../images/decorative_items/recommendations_food.svg");
+}
+
+.recommendations_souvenir {
+  background-image: url("../images/decorative_items/recommendations_souvenir.svg");
+}
+
+
+
+/* Секция поиска
+============================ */
+
+.search_button {
+  font-size: 20px;
+  background-color: #756157;
+}
+
+
+
+/* Секция подписка
+============================ */
+
+.subscription {
+  background-image: url("../images/decorative_items/subscribe_bg.jpg");
+  color: white;
+}
+
+.button_subscription {
+  background-color: #82B3D3;
+  font-size: 20px;
+  border-radius: 0 4px 4px 0;
+}
+
+
+
+/* Footer
+============================ */
+
+.footer_list {
+  list-style-type: none;
+  background-color: white;
+  color: black;
+}
+
+.contacts_phone {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+
+
+
+
+
+
+/* !!!-Страница каталога-!!!
+============================ */
+
+
+/* Фильтр заголовок + хлебные крошки
+=====================================*/
+
+.header_inner {
+  background-color: black;
+  color: white;
+  background-image: url("../images/decorative_items/filter_bg.jpg");
+  background-size: 100% auto;
+}
+
+.header_inner_title {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+}
+
+.breadcrumbs_arrow {
+  background-image: url("../images/decorative_items/breadcrumbs_arrow.svg");
+}
+
+.breadcrumbs_link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+
+
+/* Форма отправки
+============================ */
+
+.catalog_filter_group {
+  border: none;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.catalog_filter_item {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.price_title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.button_price {
+  background-color: #82B3D3;
+}
+
+.button_reset {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+/* Сортировка и отображение
+============================ */
+
+.sorting_title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.display_control {
+  list-style-type: none;
+}
+
+.sorting_select {
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+
+/* Карточки
+============================ */
+
+.hotel_card_area {
+  list-style-type: none;
+}
+
+.hotel_card_title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.button_card_link {
+  text-decoration: none;
+  background-color: #756157;
+}
+
+.button_favorites_hotel {
+  background-color: #82B3D3;
+}
+
+.psevdobutton {
+  background-color: #F2F2F2;
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+
+/* Pagination
+============================ */
+
+.pagination {
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+
+.pagination-link {
+  text-decoration: none;
+  background-color: #82B3D3;
+  color: white;
+  border-radius: 4px;
+
+}
+
+
+
+/* Секция подписка
+============================ */
+
+.button_subscription_inner {
+  background-color: #82B3D3;
+  font-size: 20px;
+  border-radius: 0 4px 4px 0;
+}
