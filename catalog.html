@@ -105,9 +105,10 @@
               <input class="price_from" type="text" placeholder="от">
               <input class="price_to" type="text" placeholder="до">
             </div>
-
-            <button class="button button_price" type="submit">Применить</button>
-            <button class="button button_reset" type="reset">Сбросить</button>
+            <div class="filter_button_wrapper">
+              <button class="button button_price" type="submit">Применить</button>
+              <button class="button button_reset" type="reset">Сбросить</button>
+            </div>
           </form>
         </header>
 
@@ -123,24 +124,24 @@
 
           <!-- отображение -->
           <ul class="display_control">
-            <li>
-              <a class="display_control_view" href="#">
+            <li class="display_control_view">
+              <a  href="#">
                 <span class="visually_hidden">Показать карточки.</span>
-                <span class="display_control_img"></span>
+                <span class="display_control_cards"></span>
               </a>
             </li>
 
-            <li>
-              <a class="display_control_view" href="#">
+            <li class="display_control_view">
+              <a href="#">
                 <span class="visually_hidden">Показать крупно.</span>
-                <span class="display_control_img"></span>
+                <span class="display_control_large"></span>
               </a>
             </li>
 
-            <li>
-              <a class="display_control_view"  href="#">
+            <li class="display_control_view">
+              <a href="#">
                 <span class="visually_hidden">Показать списком.</span>
-                <span class="display_control_img"></span>
+                <span class="display_control_list"></span>
               </a>
             </li>
           </ul>
@@ -249,49 +250,53 @@
         </ul>
 
         <!-- Подписка -->
-        <form class="subscription_inner"  action="https://echo.htmlacademy.ru/" method="get">
-          <h2 class="title subscription_title_inner">Подпишитесь на рассылку</h2>
-          <p class="subtitle subscription_subtitle_inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <input class="subscription_window_inner" type="email" placeholder="Ваш e-mail">
-          <button class="button button_subscription_inner" type="submit" form="login">Подписаться</button>
+        <form class="subscription_catalog"  action="https://echo.htmlacademy.ru/" method="get">
+          <h2 class="title subscription_title">Подпишитесь на рассылку</h2>
+          <p class="subtitle subscription_subtitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+          <div class="subscription_male_sending">
+            <input class="subscription_window_catalog" type="email" placeholder="Ваш e-mail">
+            <button class="button button_subscription" type="submit" form="login">Подписаться</button>
+          </div>
         </form>
 
       </main>
 
       <!-- Footer -->
       <footer class="page_footer">
+        <div class="footer_wrapper">
 
-        <!-- ссылки на соцсети -->
-        <ul class="footer_list">
-          <li class="footer_item">
-            <a href="https://vk.com/htmlacademy">
-              <img src="images/social_icons/vkontakte_link.svg" width="24" height="14" alt="ВКонтакте.">
-            </a>
-          </li>
+          <!-- ссылки на соцсети -->
+          <ul class="footer_list">
+            <li class="footer_item">
+              <a href="https://vk.com/htmlacademy">
+                <img src="images/social_icons/vkontakte_link.svg" width="24" height="14" alt="ВКонтакте.">
+              </a>
+            </li>
 
-          <li class="footer_item">
-            <a href="https://t.me/htmlacademy ">
-              <img src="images/social_icons/telegram_link.svg" width="18" height="15" alt="Телеграм.">
-            </a>
-          </li>
+            <li class="footer_item">
+              <a href="https://t.me/htmlacademy ">
+                <img src="images/social_icons/telegram_link.svg" width="18" height="15" alt="Телеграм.">
+              </a>
+            </li>
 
-          <li class="footer_item">
-            <a href="https://www.youtube.com/user/htmlacademyru">
-              <img src="images/social_icons/youtube_link.svg" width="22" height="17" alt="YouTube.">
-            </a>
-          </li>
-        </ul>
+            <li class="footer_item">
+              <a href="https://www.youtube.com/user/htmlacademyru">
+                <img src="images/social_icons/youtube_link.svg" width="22" height="17" alt="YouTube.">
+              </a>
+            </li>
+          </ul>
 
-        <!-- Номер для связи -->
-        <div class="footer_phone">
-          <h2 class="visually_hidden">Номер для связи</h2>
-          <a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <!-- Номер для связи -->
+          <div class="footer_phone">
+            <h2 class="visually_hidden">Номер для связи</h2>
+            <a class="contacts_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </div>
+
+          <!-- Лого, ведет на сыйт разработчика -->
+          <a class="footer_link" href="https://htmlacademy.ru/">
+            <img src="images/social_icons/html_academy_link.svg" width="115" height="33" alt="Главная страница сайта разработчика.">
+          </a>
         </div>
-
-        <!-- Лого, ведет на сыйт разработчика -->
-        <a class="footer_link" href="https://htmlacademy.ru/">
-          <img src="images/social_icons/html_academy_link.svg" width="115" height="33" alt="Главная страница сайта разработчика.">
-        </a>
 
       </footer>
 
