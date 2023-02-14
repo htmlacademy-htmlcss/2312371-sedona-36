@@ -22,12 +22,11 @@ html {
 
 
 body {
+  height: 100%;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-
-  display: flex;
-  flex-direction: column;
 
   margin: 0;
 
@@ -58,8 +57,14 @@ img {
 }
 
 .content {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
   width: 1200px;
+  min-height: 100%;
+
+  margin: 0 auto;
+
   background-color: white;
 }
 
@@ -109,8 +114,6 @@ img {
 }
 
 .description {
-  width: 230px;
-  margin: auto;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -214,11 +217,13 @@ img {
   position: relative;
   display: flex;
   background-image: url("../images/decorative_items/greeting_background.jpg");
-  height: 485px;
+  background-color: darkblue;
+
 }
 
 .greeting_title {
   margin: auto;
+  padding: 51px 0 82px;
 }
 
 
@@ -242,20 +247,29 @@ img {
   flex-wrap: wrap;
 }
 
+.advantages_slogan {
+  margin: 0 auto;
+  padding: 70px 70px 25px;
+}
+
+.advantages_subtitle {
+  margin: 0 auto;
+  padding: 0 70px 90px;
+}
+
 .advantages_item_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 33.333%;
+
+  padding: 100px 85px;
+
   min-width: 400px;
 }
 
-.advantages_slogan_wrapper{
-  width: 100%;
-  padding: 70px 0;
-  margin-bottom: 20px;
-}
-
-.advantages_slogan {
-  margin: auto;
-  margin-bottom: 26px;
-}
 
 .advantages_list {
   display: flex;
@@ -268,27 +282,30 @@ img {
   width: 100%;
   background-color: #82B3D3;
   color: white;
-
 }
 
-.offer {
-  margin-top: 101px;
-  margin-bottom: 62px;
+.advantages_item_line {
+  display: block;
+  margin: 30px auto;
+
+  width: 60px;
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.description {
-  padding-bottom: 101px;
+.line_grey {
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.advantages_item {
-  width: 33.333%;
-}
 
 .advantages_img_top {
+  object-fit: cover;
   width: 70%;
 }
 
 .advantages_img_bottom {
+  object-fit: cover;
   width: 70%;
 }
 
@@ -306,43 +323,33 @@ img {
 /* Секция рекомендации
 ============================ */
 
-.recommend {
-  display: flex;
-  flex-direction: column;
-}
-
 .recommend_title {
-  padding: 64px 0 0;
-  margin-bottom: 20px;
+  padding: 64px 70px 20px;
 }
 
 .recommend_subtitle {
-  padding:  0 0 64px;
-}
-
-.recommendations_title {
-  padding-top: 30px;
-  margin-bottom: 30px;
-}
-
-.recommendations_description {
-  padding-bottom: 80px;
+  padding:  0 70px 64px;
 }
 
 .recommendations_list {
   display: flex;
-  justify-content: center;
-}
-
-.recommendations_description {
-  width: 230px;
-  margin: auto;
 }
 
 .recommendations_item {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
   min-width: 33.334%;
+
+  padding: 80px 85px;
 }
 
+.recommendations_title {
+  padding-block: 30px;
+}
 
 .recommendations_item_lightblue {
   background-color: rgba(131, 179, 211, 0.2);
@@ -356,10 +363,6 @@ img {
 
   width: 75px;
   height: 72px;
-
-  margin: auto;
-  margin-top: 80px;
-  margin-bottom: 30px;
 }
 
 .recommendations_food {
@@ -370,10 +373,6 @@ img {
 
   width: 75px;
   height: 72px;
-
-  margin: auto;
-  margin-top: 80px;
-  margin-bottom: 30px;
 }
 
 .recommendations_souvenir {
@@ -384,10 +383,6 @@ img {
 
   width: 64px;
   height: 76px;
-
-  margin: auto;
-  margin-top: 80px;
-  margin-bottom: 28px;
 }
 
 
@@ -399,27 +394,26 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .search_title {
-  padding: 96px 0 20px;
+  padding: 96px 70px 20px;
 }
 
 .search_subtitle {
-  margin-bottom: 54px;
+  padding-bottom: 54px;
 }
 
 .search_button {
-  margin: auto;
-  margin-bottom: 95px;
+  font-size: 20px;
+  line-height: 36px;
 
-  width: 376px;
-  height: 52px;
+  background-color: #756157;
 
   padding: 8px 45px;
 
-  font-size: 18px;
-  background-color: #756157;
+  margin-bottom: 96px;
 }
 
 
@@ -430,29 +424,33 @@ img {
 .subscription {
   display: flex;
   flex-direction: column;
+
   justify-content: center;
-  height: 415px;
+  align-items: center;
+
   background-image: url("../images/decorative_items/subscribe_bg.jpg");
+  object-fit: cover;
+
+  background-color: darkblue;
   color: white;
 }
 
 .subscription_title {
-  margin-bottom: 20px;
+  padding: 96px 70px 20px;
 }
 
 .subscription_subtitle {
-  margin-bottom: 54px;
+  padding: 0 70px 54px;
 }
 
 .subscription_male_sending {
   display:flex;
   justify-content: center;
-  margin-top: 20px;
+  padding-bottom: 104px;
 }
 
 .subscription_window {
   width: 452px;
-  height: 52px;
   border: none;
   border-radius: 4px 0  0 4px;
 }
@@ -460,21 +458,41 @@ img {
 .button_subscription {
   font-size: 20px;
   line-height: 36px;
+
+  background-color: #82B3D3;
+  border-radius: 0 4px 4px 0;
+
   padding: 8px 50px;
 }
 
 
 
-.button_subscription {
-  background-color: #82B3D3;
-  font-size: 20px;
-  border-radius: 0 4px 4px 0;
-}
-
-
 
 /* Footer
 ============================ */
+.page_footer {
+  width: 100%;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+
+  padding: 45px 70px 35px;
+}
+
+.footer_list {
+  display: flex;
+}
+
+.footer_item {
+  margin-right: 26px;
+}
+
+.footer_link {
+  display: block;
+}
 
 .footer_list {
   background-color: white;
@@ -486,10 +504,6 @@ img {
   color: black;
   font-size: 40px;
   line-height: 40px;
-}
-
-.footer_phone {
-  padding: 45px 0 35px 0;
 }
 
 
@@ -506,14 +520,16 @@ img {
 =====================================*/
 
 .header_inner {
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+  background-color: darkblue;
   color: white;
   background-image: url("../images/decorative_items/filter_bg.jpg");
-  height: 412px;
+
+  padding: 35px 70px 70px;
 }
 
 .header_inner_title {
-  padding: 35px 70px 8px;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -521,7 +537,6 @@ img {
 
 .breadcrumbs {
   display: flex;
-  margin-left: 70px;
   align-items: baseline;
 }
 
@@ -550,13 +565,12 @@ img {
 
 .catalog_filter {
   display: flex;
+  justify-content: space-between;
 
-  width: 1060px;
+  width: 100%;
 
   margin: auto;
   margin-top: 40px;
-
-  justify-content: space-between;
 }
 
 .catalog_filter_group {
@@ -567,6 +581,10 @@ img {
   font-weight: 700;
 
   margin-right: 70px;
+}
+
+.catalog_filter_group :last-child {
+  margin-bottom: 0;
 }
 
 .catalog_filter_title {
@@ -598,7 +616,7 @@ img {
 
 .price_to {
   padding: 12px 20px;
-  width: 143px;
+  max-width: 143px;
 
   border: none;
   border-radius: 0 4px 4px 0;
@@ -630,13 +648,9 @@ img {
 .sorting {
   display: flex;
 
-  width: 1060px;
+  padding: 50px 70px;
 
   align-items: center;
-
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
 
   justify-content: space-between;
 }
@@ -651,10 +665,21 @@ img {
   color: #333333;
   font-size: 18px;
   line-height: 21px;
+
+  padding: 14px 20px;
+
+  min-width: 292px;
+
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .display_control {
   display: flex;
+}
+
+.display_control :last-child {
+  margin-right: 0;
 }
 
 .display_control_view {
@@ -711,9 +736,6 @@ img {
   padding: 20px;
   margin-bottom: 20px;
 
-  width: 340px;
-  height: 438px;
-
   border: 1px solid #E6E6E6;
   border-radius: 4px;
 }
@@ -741,6 +763,18 @@ img {
   line-height: 20px;
 }
 
+.hotel_card_underline{
+  display: block;
+  border: 1px solid #E6E6E6;
+
+  max-width: 1060px;
+
+  padding: 0 70px;
+  margin: 0 auto;
+
+  margin-block: 40px;
+
+}
 
 
 /* Pagination
@@ -749,15 +783,19 @@ img {
 .pagination {
   display: flex;
 
-  padding-left: 70px;
-  margin-top: 40px;
+  padding: 40px 70px 60px;
 }
 
-.pagination-item {
+.pagination_item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
   background-color: #82B3D3;
 
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
 
   margin-right: 8px;
 
@@ -765,7 +803,8 @@ img {
 }
 
 
-.pagination-link {
+.pagination_link {
+  display: block;
   text-decoration: none;
 
   font-weight: 700;
@@ -806,27 +845,3 @@ img {
 
 /* Footer
 ============================ */
-
-.page_footer {
-  width: 100%;
-}
-
-.footer_wrapper {
-  display: flex;
-  width: 1060px;
-  margin: 0 auto;
-  justify-content:space-between;
-  align-items: center;
-}
-
-.footer_list {
-  display: flex;
-}
-
-.footer_item {
-  margin-right: 26px;
-}
-
-.footer_link {
-  display: block;
-}
