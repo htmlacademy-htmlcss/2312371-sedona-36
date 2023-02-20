@@ -251,16 +251,19 @@ img {
 .advantages {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 70px;
 }
 
 .advantages_slogan {
   margin: 0 auto;
-  padding: 70px 70px 25px;
+  padding: 0 70px;
+  margin-bottom: 25px;
 }
 
 .advantages_subtitle {
   margin: 0 auto;
-  padding: 0 70px 90px;
+  padding: 0 70px;
+  margin-bottom: 90px;
 }
 
 .advantages_item_wrapper {
@@ -329,12 +332,18 @@ img {
 /* Секция рекомендации
 ============================ */
 
+.recommend{
+  padding-top: 64px;
+}
+
 .recommend_title {
-  padding: 64px 70px 20px;
+  padding: 0 70px;
+  margin-bottom: 20px;
 }
 
 .recommend_subtitle {
-  padding:  0 70px 64px;
+  padding:  0 70px;
+  margin-bottom: 64px;
 }
 
 .recommendations_list {
@@ -401,14 +410,15 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 96px 70px;
 }
 
 .search_title {
-  padding: 96px 70px 20px;
+margin-bottom: 20px;
 }
 
 .search_subtitle {
-  padding-bottom: 54px;
+  margin-bottom: 54px;
 }
 
 .search_button {
@@ -418,8 +428,6 @@ img {
   background-color: #756157;
 
   padding: 8px 45px;
-
-  margin-bottom: 96px;
 }
 
 
@@ -443,11 +451,11 @@ img {
 }
 
 .subscription_title {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .subscription_subtitle {
-  padding-bottom: 54px;
+  margin-bottom: 54px;
 }
 
 .subscription_male_sending {
@@ -756,14 +764,14 @@ img {
   font-size: 24px;
   line-height: 28px;
 
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 
   flex-grow: 1;
 }
 
 .hotel_card_image {
   width: 100%;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .hotel_card_subtitle {
