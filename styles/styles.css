@@ -739,16 +739,16 @@ margin-bottom: 20px;
 ============================ */
 
 .hotel_card_area {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  margin: 0 auto;
   padding: 0 70px;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
 }
 
 .hotel_card {
   display: flex;
   flex-wrap: wrap;
-  width: 340px;
 
   padding: 20px;
 
@@ -756,6 +756,28 @@ margin-bottom: 20px;
 
   border: 1px solid #E6E6E6;
   border-radius: 4px;
+}
+
+.hotel_grid_card {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.hotel_card_image_grid {
+  grid-column: 1 / -1;
+}
+
+.hotel_card_title_grid {
+  grid-column: 1 / -1;
+}
+
+.hotel_card_price {
+  justify-self: end;
 }
 
 .hotel_card_title {
