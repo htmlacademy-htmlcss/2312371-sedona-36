@@ -74,6 +74,14 @@ img {
 
 .visually_hidden {
   display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -739,16 +747,15 @@ margin-bottom: 20px;
 ============================ */
 
 .hotel_card_area {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   padding: 0 70px;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
 }
 
 .hotel_card {
   display: flex;
   flex-wrap: wrap;
-  width: 340px;
 
   padding: 20px;
 
@@ -758,55 +765,56 @@ margin-bottom: 20px;
   border-radius: 4px;
 }
 
-.hotel_card_title {
-  width: 100%;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+.hotel_card {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr auto;
+  gap: 16px 20px;
 
-  margin-bottom: 16px;
+  padding: 19px;
 
-  flex-grow: 1;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .hotel_card_image {
-  width: 100%;
-  margin-bottom: 16px;
+  grid-column: 1 / -1;
 }
 
-.hotel_card_subtitle {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  margin-bottom: 16px;
+.hotel_card_title {
+  grid-column: 1 / -1;
 }
 
-.card_buttons {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 16px;
+.hotel_card_price {
+  text-align: right;
+}
+
+.hotel_card_title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .button_card_link {
-  width: 140px;
-
+  padding-block: 8px;
   text-decoration: none;
-
   background-color: #756157;
 }
 
 .button_favorites_hotel {
-  width: 140px;
-
   background-color: #82B3D3;
+
+  padding-block: 8px;
 }
 
 .rating {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.hotel_rating_star {
+  align-self: center;
 }
 
 .star {
@@ -820,7 +828,7 @@ margin-bottom: 20px;
 }
 
 .psevdobutton {
-  width: 140px;
+  padding-block: 8px;
   background-color: #F2F2F2;
   color: black;
   font-weight: 400;
