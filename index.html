@@ -135,14 +135,14 @@
         </section>
 
         <!-- Подписка -->
-        <form class="subscription"  action="https://echo.htmlacademy.ru/" method="get">
+        <div class="subscription">
           <h2 class="title subscription_title">Подпишитесь на рассылку</h2>
           <p class="subtitle subscription_subtitle">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
-          <div class="subscription_male_sending">
-            <input class="subscription_window" type="email" placeholder="Ваш e-mail">
+          <form class="subscription_male_sending" name="subscription" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="subscription_window" name="e-mail" type="email" placeholder="Ваш e-mail">
             <button class="button button_subscription button_blue_states" type="submit" form="login">Подписаться</button>
-          </div>
-        </form>
+          </form>
+        </div>
 
       </main>
 
@@ -186,6 +186,60 @@
 
       </footer>
 
+    </div>
+
+    <div class="modal_container">
+      <div class="modal modal_auth">
+        <button class="modal_close_button">
+          <span class="visually_hidden">Закрыть</span>
+        </button>
+        <section class="modal_content">
+          <h2 class="modal_title">Поиск гостиницы в Седоне</h2>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="modal_filter_group">
+              <legend class="visually_hidden">Детали поездке.</legend>
+                  <label class="modal_item">Дата заезда:
+                    <div class="modal_input_wrap">
+                      <input class="modal_input" type="text" name="arrival_date" placeholder="Укажите дату" required>
+                      <p class="modal_input_info modal_input_info_error">Мы не можем отправить вас в прошлое.</p>
+                    </div>
+                  </label>
+
+                  <label class="modal_item">Дата выезда:
+                    <div class="modal_input_wrap">
+                      <input class="modal_input" type="text" name="date_of_departure" placeholder="Укажите дату" required>
+                      <p class="modal_input_info">На эти даты есть свободные номера. Пока есть.</p>
+                    </div>
+                  </label>
+
+                  <label class="modal_item modal_item_quantity">Взрослые:
+                    <div class="counter">
+                      <button type="button" class="counter_button counter_button_less"></button>
+                      <input class="counter_input" type="text" name="number_of_persons"  value="2">
+                      <button type="button" class="counter_button counter_button_more"></button>
+                    </div>
+                  </label>
+
+                  <label class="modal_item modal_item_quantity">Дети:
+                    <div class="prompt">
+                      <span class="prompt_icon"></span>
+                      <div class="prompt_tooltip">
+                        <p class="tooltip_text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.  Дети до 6 лет размещаются бесплатно.</p>
+                      </div>
+                    </div>
+                    <div class="counter">
+                      <button type="button" class="counter_button counter_button_less"></button>
+                      <input class="counter_input" type="text" name="number_of_persons"  value="2">
+                      <button type="button" class="counter_button counter_button_more"></button>
+                    </div>
+                  </label>
+
+                  <button class="button modal_button" type="button">Найти</button>
+
+            </fieldset>
+          </form>
+        </section>
+      </div>
     </div>
 
   </body>

@@ -70,43 +70,89 @@
           </ul>
 
           <!-- Форма отправки -->
-          <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="post">
 
             <fieldset class="catalog_filter_group">
               <legend class="catalog_filter_title">Инфраструктура:</legend>
-                <label class="catalog_filter_item">
-                  <input checked class="control_input" type="checkbox" name="swimming_pool">Бассейн
-                </label>
+              <ul class="catalog_filter_list">
+                <li class="catalog_filter_item">
+                  <label class="control">
+                    <input checked class="visually_hidden control_input" type="checkbox" name="swimming_pool">
+                    <span class="control_mark_checkbox"></span>
+                    <span class="control_name">Бассейн</span>
+                  </label>
+                </li>
 
-                <label class="catalog_filter_item">
-                  <input checked class="control_input" type="checkbox" name="parking_lot">Парковка
-                </label>
+                <li class="catalog_filter_item">
+                  <label class="control">
+                    <input checked class="visually_hidden control_input" type="checkbox" name="swimming_pool">
+                    <span class="control_mark_checkbox"></span>
+                    <span class="control_name">Парковка</span>
+                  </label>
+                </li>
 
-                <label class="catalog_filter_item">
-                  <input class="control_input" type="checkbox" name="Wi_Fi">Wi-Fi
-                </label>
+                <li class="catalog_filter_item">
+                  <label class="control">
+                    <input checked class="visually_hidden control_input" type="checkbox" name="swimming_pool">
+                    <span class="control_mark_checkbox"></span>
+                    <span class="control_name">Wi-Fi</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="catalog_filter_group">
               <legend class="catalog_filter_title">Тип жилья:</legend>
-                <label class="catalog_filter_item">
-                  <input checked class="control_input" type="radio" name="hotel">Гостиница
-                </label>
+              <ul class="catalog_filter_list">
+                <li class="catalog_filter_item">
+                  <label class="control">
+                    <input checked class="visually_hidden control_input" type="radio" name="hotel">
+                    <span class="control_mark_radio"></span>
+                    <span class="control_name">Гостиница</span>
+                  </label>
+                </li>
 
-                <label class="catalog_filter_item">
-                  <input class="control_input" type="radio" name="motel">Мотель
-                </label>
+                <li class="catalog_filter_item">
+                  <label class="control">
+                    <input checked class="visually_hidden control_input" type="radio" name="hotel">
+                    <span class="control_mark_radio"></span>
+                    <span class="control_name">Мотель</span>
+                  </label>
+                </li>
 
-                <label class="catalog_filter_item">
-                  <input class="control_input" type="radio" name="apartments">Апартаменты
-                </label>
+                <li class="catalog_filter_item">
+                  <label class="control">
+                    <input checked class="visually_hidden control_input" type="radio" name="hotel">
+                    <span class="control_mark_radio"></span>
+                    <span class="control_name">Апартаменты</span>
+                  </label>
+                </li>
+
+              </ul>
+
             </fieldset>
 
-            <div class="price">
-              <p class="price_title">Стоимость, ₽:</p>
-              <input class="price_from" type="text" placeholder="от">
-              <input class="price_to" type="text" placeholder="до">
-            </div>
+            <fieldset class="price">
+              <legend class="price_title">Стоимость, ₽:</legend>
+              <label class="price_label price_label_from" for="">
+                <input class="price_value price_from" type="text" placeholder="0">
+              </label>
+              <label class="price_label price_label_to" for="">
+                <input class="price_value price_to" type="text" placeholder="9000">
+              </label>
+
+              <div class="range">
+                <div class="range_scale">
+                  <div class="range_bar" style="left: 0; width: 226px">
+                    <button class="range_toggle toggle_min" type="button">
+                      <span class="visually_hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range_toggle toggle_max" type="button">
+                      <span class="visually_hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+            </fieldset>
             <div class="filter_button_wrapper">
               <button class="button button_price button_blue_states" type="submit">Применить</button>
               <button class="button button_reset" type="reset">Сбросить</button>
@@ -261,14 +307,14 @@
         </ul>
 
         <!-- Подписка -->
-        <form class="subscription_catalog"  action="https://echo.htmlacademy.ru/" method="get">
+        <div class="subscription_catalog">
           <h2 class="title subscription_title">Подпишитесь на рассылку</h2>
           <p class="subtitle subscription_subtitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <div class="subscription_male_sending">
-            <input class="subscription_window subscription_window_catalog" type="email" placeholder="Ваш e-mail">
+          <form class="subscription_male_sending" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="subscription_window subscription_window_catalog" name="e-mail" type="email" placeholder="Ваш e-mail">
             <button class="button button_subscription button_blue_states" type="submit" form="login">Подписаться</button>
-          </div>
-        </form>
+          </form>
+        </div>
 
       </main>
 
