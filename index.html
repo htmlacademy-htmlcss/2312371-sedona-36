@@ -140,7 +140,7 @@
           <p class="subtitle subscription_subtitle">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
           <form class="subscription_male_sending" name="subscription" action="https://echo.htmlacademy.ru/" method="post">
             <input class="subscription_window" name="e-mail" type="email" placeholder="Ваш e-mail">
-            <button class="button button_subscription button_blue_states" type="submit" form="login">Подписаться</button>
+            <button class="button button_subscription button_blue_states" type="submit">Подписаться</button>
           </form>
         </div>
 
@@ -198,43 +198,47 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="modal_filter_group">
               <legend class="visually_hidden">Детали поездке.</legend>
-                  <label class="modal_item">Дата заезда:
-                    <div class="modal_input_wrap">
-                      <input class="modal_input" type="text" name="arrival_date" placeholder="Укажите дату" required>
-                      <p class="modal_input_info modal_input_info_error">Мы не можем отправить вас в прошлое.</p>
-                    </div>
-                  </label>
+              <label class="modal_item">Дата заезда:
+                <div class="modal_input_wrap">
+                  <input class="modal_input" type="text" name="arrival_date" placeholder="Укажите дату" required>
+                  <p class="modal_input_info modal_input_info_error">Мы не можем отправить вас в прошлое.</p>
+                </div>
+              </label>
 
-                  <label class="modal_item">Дата выезда:
-                    <div class="modal_input_wrap">
-                      <input class="modal_input" type="text" name="date_of_departure" placeholder="Укажите дату" required>
-                      <p class="modal_input_info">На эти даты есть свободные номера. Пока есть.</p>
-                    </div>
-                  </label>
+              <label class="modal_item">Дата выезда:
+                <div class="modal_input_wrap">
+                  <input class="modal_input" type="text" name="date_of_departure" placeholder="Укажите дату" required>
+                  <p class="modal_input_info">На эти даты есть свободные номера. Пока есть.</p>
+                </div>
+              </label>
 
-                  <label class="modal_item modal_item_quantity">Взрослые:
-                    <div class="counter">
-                      <button type="button" class="counter_button counter_button_less"></button>
-                      <input class="counter_input" type="text" name="number_of_persons"  value="2">
-                      <button type="button" class="counter_button counter_button_more"></button>
-                    </div>
-                  </label>
+              <div class="modal_item modal_item_quantity">Взрослые:
+                <div class="counter">
+                  <button type="button" class="counter_button counter_button_less"><svg class="counter_button_minus" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg></button>
 
-                  <label class="modal_item modal_item_quantity">Дети:
-                    <div class="prompt">
-                      <span class="prompt_icon"></span>
-                      <div class="prompt_tooltip">
-                        <p class="tooltip_text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.  Дети до 6 лет размещаются бесплатно.</p>
-                      </div>
-                    </div>
-                    <div class="counter">
-                      <button type="button" class="counter_button counter_button_less"></button>
-                      <input class="counter_input" type="text" name="number_of_persons"  value="2">
-                      <button type="button" class="counter_button counter_button_more"></button>
-                    </div>
-                  </label>
+                  <input class="counter_input" type="text" name="number_of_persons"  value="2">
 
-                  <button class="button modal_button" type="button">Найти</button>
+                  <button type="button" class="counter_button counter_button_more"><svg class="counter_button_plus" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg></button>
+                </div>
+              </div>
+
+              <div class="modal_item modal_item_quantity">Дети:
+                <div class="prompt">
+                  <span class="prompt_icon"></span>
+                  <div class="prompt_tooltip">
+                    <p class="tooltip_text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.  Дети до 6 лет размещаются бесплатно.</p>
+                  </div>
+                </div>
+                <div class="counter">
+                  <button type="button" class="counter_button counter_button_less"><svg class="counter_button_minus" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg></button>
+
+                  <input class="counter_input" type="text" name="number_of_persons"  value="2">
+
+                  <button type="button" class="counter_button counter_button_more"><svg class="counter_button_plus" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg></button>
+                </div>
+              </div>
+
+              <button class="button modal_button" type="submit">Найти</button>
 
             </fieldset>
           </form>

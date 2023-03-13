@@ -152,7 +152,6 @@ img {
 
 .button_reset:focus-visible {
   outline: 3px solid #83B3D3;
-  outline-offset: 3px;
 }
 
 .button_reset:active {
@@ -747,6 +746,7 @@ margin-bottom: 20px;
 /* Модальное окно
 ============================ */
 .modal_container {
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -924,7 +924,7 @@ margin-bottom: 20px;
   max-width: 247px;
 }
 
-.modal_item:last-of-type {
+.modal_item_quantity:last-of-type {
   justify-content: flex-end;
 }
 
@@ -932,16 +932,13 @@ margin-bottom: 20px;
   display: flex;
   width: 110px;
   height: 48px;
-  background: #F2F2F2;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
 .counter_input {
   width: 31px;
   padding: 14px 10px;
   background: inherit;
-  border-radius: 4px;
+  background: #F2F2F2;
   color: #000000;
   border: none;
 
@@ -954,6 +951,10 @@ margin-bottom: 20px;
 .prompt {
   position: relative;
   margin: 0 46px 0 10px;
+}
+
+.prompt:hover .prompt_tooltip {
+  opacity: 1;
 }
 
 .prompt_icon {
@@ -978,6 +979,9 @@ margin-bottom: 20px;
   top: 40px;
   left: 50%;
   transform: translatex(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
 }
 
 .prompt_tooltip::before {
@@ -1009,33 +1013,45 @@ margin-bottom: 20px;
   border: none;
   flex-grow: 1;
   cursor: pointer;
+
 }
 
-.counter_button_less::after {
-  content: "";
-  display: block;
-  width: 14px;
-  height: 2px;
-  background: rgba(117, 97, 87, 0.3);
+.counter_button_less {
+  border-radius: 4px 0 0 4px;
 }
 
-.counter_button_more::after {
-  content: "";
-  display: block;
-  width: 14px;
-  height: 2px;
-  background: rgba(117, 97, 87, 0.3);
+.counter_button_more {
+  border-radius: 0 4px 4px 0;
 }
 
-.counter_button_more::before {
-  content: "";
-  position: absolute;
+.counter_button:focus-visible {
+  outline: none;
+  border: none;
+}
 
-  display: block;
-  width: 14px;
-  height: 2px;
-  transform: rotate(90deg);
-  background: rgba(117, 97, 87, 0.3);
+.counter_input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+
+.counter_button_less:hover svg path,
+.counter_button_more:hover svg path
+ {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.counter_button_less:focus-visible svg,
+.counter_button_more:focus-visible svg {
+  outline: 3px solid #82B3D3;
+  outline-offset: 20;
+  border-radius: 2px;
+}
+
+.counter_button_less:active svg path,
+.counter_button_more:active svg path {
+  fill-opacity: 0.2;
 }
 
 
@@ -1046,6 +1062,20 @@ margin-bottom: 20px;
   border: none;
   background: #83B3D3;
   border-radius: 10px;
+}
+
+.modal_button:hover {
+  background: #68A2CA;
+}
+
+.modal_button:focus-visible {
+  background: #68A2CA;
+  outline: 3px solid #81c9f9;
+}
+
+.modal_button:active {
+  background: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -1215,9 +1245,12 @@ margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.control_input:disabled {
-  pointer-events: none;
+.control_input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
+
 
 .control_input:disabled + .control_mark_checkbox,
 .control_input:disabled + .control_mark_radio {
@@ -1226,8 +1259,11 @@ margin-bottom: 20px;
   pointer-events: none;
 }
 
-.control_mark_checkbox:focus,
-.control_mark_radio:focus  {
+.control_input:focus-visible + .control_mark_checkbox {
+  outline: 3px solid #83B3D3;
+}
+
+.control_input:focus + .control_mark_radio {
   outline: 3px solid #83B3D3;
 }
 
@@ -1245,7 +1281,7 @@ margin-bottom: 20px;
   position: absolute;
   top: 6px;
   left: 4px;
-  background-image: url("/images/decorative_items/check_mark.svg");
+  background-image: url("../images/decorative_items/check_mark.svg");
   width: 12px;
   height: 10px;
 }
@@ -1264,7 +1300,10 @@ margin-bottom: 20px;
 }
 
 .price {
+  display: flex;
+  flex-wrap: wrap;
   border: none;
+  gap: 2px;
 }
 
 .price_title {
@@ -1313,7 +1352,8 @@ margin-bottom: 20px;
   width: 20px;
   height: 24px;
   position: absolute;
-  top: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 20px;
   font-family: 'PT Sans';
   font-style: normal;
@@ -1344,6 +1384,10 @@ margin-bottom: 20px;
 .price_value:active {
   outline: 3px solid #83B3D3;
   outline-offset: -3px;
+}
+
+.range {
+  width: 100%;
 }
 
 .range_scale {
@@ -1403,7 +1447,7 @@ margin-bottom: 20px;
 }
 
 .button_price {
-  padding: 8px 50px;
+  padding: 6px 50px;
 
   margin-bottom: 40px;
 
@@ -1411,11 +1455,12 @@ margin-bottom: 20px;
 }
 
 .button_reset {
-  margin: auto;
-  padding: 8px 50px;
+  width: 100%;
+  padding: 6px 50px;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0);
 }
+
 
 
 
