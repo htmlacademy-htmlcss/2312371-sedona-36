@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <title>HTML Academy: Седона каталог</title>
   </head>
 
@@ -14,7 +15,7 @@
       <header class="page_header">
         <h1 class="visually_hidden">Седона — небольшой городок в Аризоне</h1>
         <nav class="navigation">
-          <a class="navigation_logo" href="/index.html">
+          <a class="navigation_logo" href="index.html">
             <img src="images/header/logo_sedona.svg" width="140" height="70" alt="Логотип Седона.">
           </a>
 
@@ -24,7 +25,7 @@
             </li>
 
             <li>
-              <a class="navigation_link" href="about.html">О седоне</a>
+              <a class="navigation_link" href="about.html">О Седоне</a>
             </li>
 
             <li>
@@ -34,9 +35,9 @@
 
           <ul class="navigation_list navigation_user">
             <li>
-              <a class="navigation_link_user" href="#">
+              <button class="navigation_search_user" type="button">
                 <span class="visually_hidden">Поиск.</span>
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 19 19"><path fill="#000" d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/></svg></a>
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 19 19"><path fill="#000" d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/></svg></button>
             </li>
 
             <li class="navigation_item_quantity">
@@ -60,84 +61,86 @@
 
           <ul class="breadcrumbs">
             <li class="breadcrumbs_item">
-              <a class="breadcrumbs_link href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 13 13"><path fill="#fff" d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/><path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"/></svg></a>
+              <a class="breadcrumbs_link" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 13 13"><path fill="#fff" d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/><path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"/></svg></a>
             </li>
 
             <li class="breadcrumbs_item">
-              <a class="breadcrumbs_link" href="/catalog.html">Гостиницы</a>
+              <a class="breadcrumbs_link" href="catalog.html">Гостиницы</a>
             </li>
 
           </ul>
 
           <!-- Форма отправки -->
           <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="catalog_filter_group_wraper">
+              <fieldset class="catalog_filter_group">
+                <legend class="catalog_filter_title">Инфраструктура:</legend>
+                <ul class="catalog_filter_list">
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input checked class="control_input" type="checkbox" name="swimming_pool">
+                      <span class="control_mark_checkbox"></span>
+                      <span class="control_name">Бассейн</span>
+                    </label>
+                  </li>
 
-            <fieldset class="catalog_filter_group">
-              <legend class="catalog_filter_title">Инфраструктура:</legend>
-              <ul class="catalog_filter_list">
-                <li class="catalog_filter_item">
-                  <label class="control">
-                    <input checked class="control_input" type="checkbox" name="swimming_pool">
-                    <span class="control_mark_checkbox"></span>
-                    <span class="control_name">Бассейн</span>
-                  </label>
-                </li>
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input checked class="control_input" type="checkbox" name="swimming_pool">
+                      <span class="control_mark_checkbox"></span>
+                      <span class="control_name">Парковка</span>
+                    </label>
+                  </li>
 
-                <li class="catalog_filter_item">
-                  <label class="control">
-                    <input checked class="control_input" type="checkbox" name="swimming_pool">
-                    <span class="control_mark_checkbox"></span>
-                    <span class="control_name">Парковка</span>
-                  </label>
-                </li>
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input checked class="control_input" type="checkbox" name="swimming_pool">
+                      <span class="control_mark_checkbox"></span>
+                      <span class="control_name">Wi-Fi</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
 
-                <li class="catalog_filter_item">
-                  <label class="control">
-                    <input checked class="control_input" type="checkbox" name="swimming_pool">
-                    <span class="control_mark_checkbox"></span>
-                    <span class="control_name">Wi-Fi</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+              <fieldset class="catalog_filter_group">
+                <legend class="catalog_filter_title">Тип Жилья:</legend>
+                <ul class="catalog_filter_list">
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input checked class="control_input" type="radio" name="hotel">
+                      <span class="control_mark_radio"></span>
+                      <span class="control_name">Гостиница</span>
+                    </label>
+                  </li>
 
-            <fieldset class="catalog_filter_group">
-              <legend class="catalog_filter_title">Тип жилья:</legend>
-              <ul class="catalog_filter_list">
-                <li class="catalog_filter_item">
-                  <label class="control">
-                    <input checked class="control_input" type="radio" name="hotel">
-                    <span class="control_mark_radio"></span>
-                    <span class="control_name">Гостиница</span>
-                  </label>
-                </li>
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input checked class="control_input" type="radio" name="hotel">
+                      <span class="control_mark_radio"></span>
+                      <span class="control_name">Мотель</span>
+                    </label>
+                  </li>
 
-                <li class="catalog_filter_item">
-                  <label class="control">
-                    <input checked class="control_input" type="radio" name="hotel">
-                    <span class="control_mark_radio"></span>
-                    <span class="control_name">Мотель</span>
-                  </label>
-                </li>
+                  <li class="catalog_filter_item">
+                    <label class="control">
+                      <input checked class="control_input" type="radio" name="hotel">
+                      <span class="control_mark_radio"></span>
+                      <span class="control_name">Апартаменты</span>
+                    </label>
+                  </li>
 
-                <li class="catalog_filter_item">
-                  <label class="control">
-                    <input checked class="control_input" type="radio" name="hotel">
-                    <span class="control_mark_radio"></span>
-                    <span class="control_name">Апартаменты</span>
-                  </label>
-                </li>
+                </ul>
 
-              </ul>
+              </fieldset>
+            </div>
 
-            </fieldset>
 
             <fieldset class="price">
               <legend class="price_title">Стоимость, ₽:</legend>
-              <label class="price_label price_label_from" for="">
+              <label class="price_label price_label_from">
                 <input class="price_value price_from" type="text" placeholder="0">
               </label>
-              <label class="price_label price_label_to" for="">
+              <label class="price_label price_label_to">
                 <input class="price_value price_to" type="text" placeholder="9000">
               </label>
 
@@ -152,6 +155,7 @@
                     </button>
                   </div>
                 </div>
+              </div>
             </fieldset>
             <div class="filter_button_wrapper">
               <button class="button button_price button_blue_states" type="submit">Применить</button>
@@ -165,7 +169,7 @@
           <h2 class="sorting_title">Найдено гостиниц: 38</h2>
 
           <select class="sorting_select" aria-label="Сортировка">
-            <option value="cheap">Сначала дешевле</option>
+            <option value="cheap">Сначала дешевые</option>
             <option value="popular">Сначала популярное</option>
             <option value="expensive">Сначала дороже</option>
           </select>

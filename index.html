@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -14,7 +15,7 @@
       <header class="page_header">
         <h1 class="visually_hidden">Седона — небольшой городок в Аризоне</h1>
         <nav class="navigation">
-          <a class="navigation_logo" href="/index.html">
+          <a class="navigation_logo" href="index.html">
             <img src="images/header/logo_sedona.svg" width="140" height="70" alt="Логотип Седона.">
           </a>
 
@@ -24,7 +25,7 @@
             </li>
 
             <li>
-              <a class="navigation_link" href="about.html">О седоне</a>
+              <a class="navigation_link" href="about.html">О Седоне</a>
             </li>
 
             <li>
@@ -34,9 +35,9 @@
 
           <ul class="navigation_list navigation_user">
             <li>
-              <a class="navigation_link_user" href="#">
+              <button class="navigation_search_user" type="button">
                 <span class="visually_hidden">Поиск.</span>
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 19 19"><path fill="#000" d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/></svg></a>
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 19 19"><path fill="#000" d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/></svg></button>
             </li>
 
             <li class="navigation_item_quantity">
@@ -57,9 +58,9 @@
       <main class="main_container main_index">
 
         <!-- Секция приветствия -->
-        <section class="greeting_section">
+        <div class="greeting_section">
           <img class="greeting_title" src="images/decorative_items/greeting_title.svg" width="458" height="352" alt="Добро пожаловать в Седону.">
-        </section>
+        </div>
 
         <!-- Секция преимущества -->
         <section class="advantages">
@@ -94,7 +95,7 @@
             <li class="advantages_item_blue">
               <img class="advantages_img_bottom" src="images/decorative_items/advantages_devils_bridge.jpg" width="800" height="384" alt="Мост дьявола.">
               <div class="advantages_item_wrapper">
-                <h3 class="offer advantages_item_line">Там есть мост дьявола</h3>
+                <h3 class="offer advantages_item_line">Там есть <br> мост дьявола</h3>
                 <p class="description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -198,19 +199,19 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="modal_filter_group">
               <legend class="visually_hidden">Детали поездке.</legend>
-              <label class="modal_item">Дата заезда:
+              <div class="modal_item">Дата заезда:
                 <div class="modal_input_wrap">
                   <input class="modal_input" type="text" name="arrival_date" placeholder="Укажите дату" required>
                   <p class="modal_input_info modal_input_info_error">Мы не можем отправить вас в прошлое.</p>
                 </div>
-              </label>
+              </div>
 
-              <label class="modal_item">Дата выезда:
+              <div class="modal_item">Дата выезда:
                 <div class="modal_input_wrap">
                   <input class="modal_input" type="text" name="date_of_departure" placeholder="Укажите дату" required>
                   <p class="modal_input_info">На эти даты есть свободные номера. Пока есть.</p>
                 </div>
-              </label>
+              </div>
 
               <div class="modal_item modal_item_quantity">Взрослые:
                 <div class="counter">
